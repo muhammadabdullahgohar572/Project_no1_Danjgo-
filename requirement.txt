@@ -1,5 +1,10 @@
-asgiref==3.7.2
-Django==3.2.25
-pytz==2025.1
-sqlparse==0.4.4
-typing_extensions==4.7.1
+asgiref==3.8.1
+Django==5.1.7
+django-browser-reload==1.18.0
+django-tailwind==3.8.0
+django-tailwindcss==0.4.0
+pillow==11.1.0
+sqlparse==0.5.3
+tailwindcss==0.0.1
+tzdata==2025.1
+uv==0.6.6
