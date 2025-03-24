@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <h1 class="text-center mt-4 text-white">Welcome to my new Django project</h1>
+
+  
+   <a class="btn btn-primary" href="{% url 'tweet_created' %}">Create a New Tweet</a>
+
+
+   
+<div class="container gap-3 row">
+    {% for tweet in tweets  %}
+    <div class="card" style="width: 18rem;">
+     <img src="{{tweet.photo.url}}" class="card-img-top" alt="...">
+     <div class="card-body">
+       <h5 class="card-title">{tweet.user.username}</h5>
+       <p class="card-text">{tweet.text}</p>
+       <a href="{% url 'tweet_edit' tweet.id %}" class="btn btn-warning">Tweet Edit</a>
+
+       <a href="{%  url 'tweet_delete' tweet.id  %}" class="btn btn-danger">Tweet Delete</a>
+
+    </div>
+   </div>
+    {% endfor %}
+</div>
+    
+
+  {% endblock %}
