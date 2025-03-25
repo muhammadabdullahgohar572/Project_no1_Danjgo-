@@ -9,9 +9,10 @@ class TweetFrom(forms.ModelForm):
         fields=['text','photo']
     
     
-class UserRegsisterForm(UserCreationForm):
-   email= forms.EmailField()
-   class Meta:
-       model=User
-       fields=("username","email","password1","password2")
-        
+
+class RegisterForm(UserCreationForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ["username", "email", "password1", "password2"]
