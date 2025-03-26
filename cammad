@@ -2,6 +2,7 @@ python -m pip install --upgrade pip
 python3 -m venv .venv
 .venv\Scripts\activate
 pip freeze > requirement.txt
+pip install django
 django-admin startproject chaiheadq
 cd chaiheadq
 python manage.py migrate 
